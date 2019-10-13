@@ -40,6 +40,7 @@ public class SkuController {
     }
 
     /***
+     *    冲突版本Ayden
      * Sku分页搜索实现
      * @param page:当前页
      * @param size:每页显示多少条
@@ -48,6 +49,15 @@ public class SkuController {
     @GetMapping(value = "/search/{page}/{size}")
     public Result<PageInfo> findPage(@PathVariable int page, @PathVariable int size) {
         //调用SkuService实现分页查询Sku
+
+        //冲突制造
+
+        System.out.println(123);
+
+        System.out.println(324);
+        System.out.println("dsadrrwe");
+
+
         PageInfo<Sku> pageInfo = skuService.findPage(page, size);
         return new Result<PageInfo>(true, StatusCode.OK, "查询成功", pageInfo);
     }
@@ -104,6 +114,7 @@ public class SkuController {
     }
 
     /***
+     * 版本冲突制造
      * 根据ID查询Sku数据
      * @param id
      * @return
@@ -111,6 +122,12 @@ public class SkuController {
     @GetMapping("/{id}")
     public Result<Sku> findById(@PathVariable(name = "id") Long id) {
         //调用SkuService实现根据主键查询Sku
+
+        StringBuffer sb = new StringBuffer();
+        sb.append("ww");
+        sb.append(true);
+        sb.append(1245454);
+        System.out.println(sb);
         Sku sku = skuService.findById(id);
         return new Result<Sku>(true, StatusCode.OK, "查询成功", sku);
     }
