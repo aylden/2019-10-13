@@ -2,7 +2,6 @@ package com.changgou.goods.service.impl;
 
 import com.changgou.goods.dao.CategoryMapper;
 import com.changgou.goods.dao.SpecMapper;
-import com.changgou.goods.dao.TemplateMapper;
 import com.changgou.goods.pojo.Category;
 import com.changgou.goods.pojo.Spec;
 import com.changgou.goods.service.SpecService;
@@ -14,6 +13,8 @@ import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
+
+
 
 /****
  * @Author:admin

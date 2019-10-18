@@ -13,7 +13,7 @@
     <dependencies>
         <!--client openg start-web mybatis mysql pagehler -->
 
-        <!--依赖来自定义的goods微服务的POJO 和feign-->
+        <!--依赖来自定义的goods微服务的POJO和feign-->
 
         <dependency>
             <groupId>com.changgou</groupId>

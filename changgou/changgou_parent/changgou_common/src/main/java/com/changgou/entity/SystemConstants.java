@@ -3,12 +3,12 @@ package com.changgou.entity;
 /**
  * 描述
  *
- * @author www.itheima.com
+ * @author
  * @version 1.0
  * @package entity *
  * @since 1.0
  */
-public class SystemConstants {
+public interface SystemConstants {
     /**
      * 秒杀商品存储到前缀的KEY
      */

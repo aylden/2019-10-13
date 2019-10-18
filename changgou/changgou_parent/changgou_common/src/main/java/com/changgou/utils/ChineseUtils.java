@@ -6,7 +6,7 @@ import java.util.Random;
 /***
  *
  * @Author:shenkunlin
- * @Description:itheima
+ * @Description:
  * @date: 2019/5/7 22:18
  *
  ****/

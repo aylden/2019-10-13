@@ -22,6 +22,7 @@ import java.util.Map;
  * @Description
  * @Version
  **/
+// ynjLbp1hRWrEPA
 @Component
 @RabbitListener(queues = "${mq.pay.queue.order}")
 public class OrderUpdateListener {
@@ -30,7 +31,7 @@ public class OrderUpdateListener {
     private OrderService orderService;
     /*@Autowired
     private UserFeign userFeign;*/
-    @Autowired
+    @Autowired(required = false)
     private SkuFeign skuFeign;
     @Autowired
     private OrderItemService orderItemService;

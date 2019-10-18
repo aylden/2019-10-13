@@ -25,7 +25,7 @@ public interface SpuFeign {
      * @return
      */
     @PostMapping(value = "/search/{page}/{size}")
-    Result<PageInfo> findPage(@RequestBody(required = false) Spu spu, @PathVariable int page, @PathVariable int size);
+    Result<PageInfo> findPage(@RequestBody(required = false) Spu spu, @PathVariable(value = "page") int page, @PathVariable(value = "size") int size);
 
     /***
      * Spu分页搜索实现
@@ -34,7 +34,7 @@ public interface SpuFeign {
      * @return
      */
     @GetMapping(value = "/search/{page}/{size}")
-    Result<PageInfo> findPage(@PathVariable int page, @PathVariable int size);
+    Result<PageInfo> findPage(@PathVariable(value = "page") int page, @PathVariable(value = "size") int size);
 
     /***
      * 多条件搜索品牌数据
@@ -50,7 +50,7 @@ public interface SpuFeign {
      * @return
      */
     @DeleteMapping(value = "/{id}")
-    Result delete(@PathVariable Long id);
+    Result delete(@PathVariable(value = "id") Long id);
 
     /***
      * 修改Spu数据
@@ -59,7 +59,7 @@ public interface SpuFeign {
      * @return
      */
     @PutMapping(value = "/{id}")
-    Result update(@RequestBody Spu spu, @PathVariable Long id);
+    Result update(@RequestBody Spu spu, @PathVariable(value = "id") Long id);
 
     /***
      * 新增Spu数据

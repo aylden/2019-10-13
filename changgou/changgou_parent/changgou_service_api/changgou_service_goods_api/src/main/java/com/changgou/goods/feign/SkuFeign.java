@@ -26,7 +26,7 @@ public interface SkuFeign {
      * @return
      */
     @PostMapping(value = "/search/{page}/{size}")
-    Result<PageInfo> findPage(@RequestBody(required = false) Sku sku, @PathVariable int page, @PathVariable int size);
+    Result<PageInfo> findPage(@RequestBody(required = false) Sku sku, @PathVariable(value = "page") int page, @PathVariable(value = "size") int size);
 
     /***
      * Sku分页搜索实现
@@ -35,7 +35,7 @@ public interface SkuFeign {
      * @return
      */
     @GetMapping(value = "/search/{page}/{size}")
-    Result<PageInfo> findPage(@PathVariable int page, @PathVariable int size);
+    Result<PageInfo> findPage(@PathVariable(value = "page") int page, @PathVariable(value = "size") int size);
 
     /***
      * 多条件搜索品牌数据
@@ -51,7 +51,7 @@ public interface SkuFeign {
      * @return
      */
     @DeleteMapping(value = "/{id}")
-    Result delete(@PathVariable Long id);
+    Result delete(@PathVariable(value = "id") Long id);
 
     /***
      * 修改Sku数据
@@ -60,7 +60,7 @@ public interface SkuFeign {
      * @return
      */
     @PutMapping(value = "/{id}")
-    Result update(@RequestBody Sku sku, @PathVariable Long id);
+    Result update(@RequestBody Sku sku, @PathVariable(value = "id") Long id);
 
     /***
      * 新增Sku数据
@@ -92,7 +92,7 @@ public interface SkuFeign {
      * @return
      */
     @GetMapping("/status/{status}")
-    public Result<List<Sku>> findByStatus(@PathVariable String status);
+    public Result<List<Sku>> findByStatus(@PathVariable(value = "status") String status);
 
     @PostMapping("/decreaseSku")
     public Result decreaseSku(@RequestBody OrderItem orderItem);
